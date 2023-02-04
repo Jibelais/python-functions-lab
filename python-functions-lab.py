@@ -31,26 +31,18 @@ def largest(nums):
 print(largest([1,2,3,4,0]))
 
 
-# def occurances (str, char): 
-#     count = 0
+def occurances (str, char): 
+    count = 0
+    if len(char) == 1: 
+        for letter in str: 
+            if letter == char:
+                count  = count + 1
+    if len(char) > 1: 
+        count = str.count(char)
 
-#     for idx in list(range(len(str))): 
-#         if str[idx] == char[0]:
-#             count = count + 1
-#         if str[idx] == str[idx +1]:
-#             count = count 
-#     return count
-#     # print (len(char))
-#     # if len(char) == 1: 
-#     #     for letter in str: 
-#     #         if letter == char:
-#     #             count  = count + 1
-#     # elif len(char) > 1: 
-#     #     if char in str: 
-#     #         count = count+ 1
-#     # return count
-    
-# print(occurances ('fleeep fleeep', 'eee'))
+    return count
+print("#3")   
+print(occurances ('fleep floop', 'ee'))
 
 
 # 4. Write a function named productthat takes an arbitrary number of numbers, multiplies them all together, and returns the product.
